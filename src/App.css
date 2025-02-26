@@ -1,6 +1,80 @@
 .App {
   text-align: center;
 }
+/* App.css */
+
+/* Stile per l'immagine sopra */
+.image-container {
+  text-align: center; /* Allinea l'immagine al centro */
+}
+
+.img-fluid {
+  max-width: 100%;  /* L'immagine non supererà la larghezza del contenitore */
+  height: auto;     /* Mantieni le proporzioni dell'immagine */
+}
+
+/* Aggiungi uno spazio sotto l'immagine */
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+.image-container img {
+  width: 50%; /* Imposta la larghezza al 100% del contenitore */
+  max-width: 100px; /* Imposta la larghezza massima */
+  height: auto; /* Mantieni le proporzioni dell'immagine */
+}
+
+
+/* App.css */
+
+/* Animazione per marquee */
+.marquee-container {
+  position: relative;
+  width: 100%; /* Puoi specificare una larghezza fissa se necessario */
+  overflow: hidden;
+}
+
+.marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-text 30s linear infinite; /* L'animazione si ripete */
+}
+
+@keyframes scroll-text {
+  0% {
+    transform: translateX(100%); /* Inizia fuori a destra */
+  }
+  100% {
+    transform: translateX(-100%); /* Finisce fuori a sinistra */
+  }
+}
+
+.marquee span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.marquee:nth-child(odd) span {
+  color: #ff4500; /* Colore rosso per il primo testo */
+}
+
+.marquee:nth-child(even) span {
+  color: #1e90ff; /* Colore blu per il secondo testo */
+}
+
+
+
+
+
+body {
+  background-color: #fff0f3; /* Colore di sfondo chiaro (Light Blue) */
+}
+
+/* Cambia il background della sezione principale */
+.container {
+  background-color: #d9c7f6; /* Colore di sfondo blu chiaro */
+  padding: 20px;
+  border-radius: 8px; /* Aggiungi bordi arrotondati se desiderato */
+}
 
 .App-logo {
   height: 40vmin;
@@ -35,4 +109,7 @@
   to {
     transform: rotate(360deg);
   }
+
+
+  
 }
